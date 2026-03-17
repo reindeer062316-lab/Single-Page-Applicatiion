@@ -199,7 +199,10 @@ function bindLifeGallery() {
     if (e.key === "ArrowRight") next();
   };
 
-  lifeBtn.addEventListener("click", open);
+  lifeBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    open();
+  });
 
   lightbox.addEventListener("click", (e) => {
     const t = e.target;
@@ -302,7 +305,10 @@ function bindEmailModal() {
     (lastFocused || btn).focus?.();
   };
 
-  btn.addEventListener("click", open);
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    open();
+  });
 
   modal.addEventListener("click", (e) => {
     const t = e.target;
