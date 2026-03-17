@@ -105,7 +105,8 @@ function bindLifeGallery() {
   const lightbox = document.getElementById("lightbox");
   const img = document.getElementById("lightboxImg");
   const dotsWrap = document.getElementById("lightboxDots");
-  if (!lifeBtn || !lightbox || !img || !dotsWrap) return;
+  const status = document.getElementById("lightboxStatus");
+  if (!lifeBtn || !lightbox || !img || !dotsWrap || !status) return;
 
   const panel = lightbox.querySelector(".lightbox__panel");
   const closeBtn = lightbox.querySelector(".lightbox__close");
@@ -143,9 +144,17 @@ function bindLifeGallery() {
   const setIndex = (next, dir = "next") => {
     idx = (next + photos.length) % photos.length;
     playAnim(dir);
+    status.textContent = "載入中…";
     img.src = photos[idx];
     renderDots();
   };
+
+  img.addEventListener("load", () => {
+    status.textContent = `${idx + 1} / ${photos.length}`;
+  });
+  img.addEventListener("error", () => {
+    status.textContent = "圖片載入失敗，請再試一次。";
+  });
 
   const getFocusable = () => {
     const nodes = panel.querySelectorAll(
