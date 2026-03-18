@@ -52,32 +52,30 @@ function createPawprint(x, y) {
   setTimeout(() => paw.remove(), 1500);
 }
 
-// 自我介紹 Modal
+
+
+
+// 自我介紹 → 貓咪 gif
 const introBtn = document.getElementById('introBtn');
-const introModal = document.getElementById('introModal');
-const modalBack = document.getElementById('modalBack');
-const modalBackdrop = document.getElementById('modalBackdrop');
+const catOverlay = document.getElementById('catOverlay');
+const catClose = document.getElementById('catClose');
+const catBackdrop = document.getElementById('catBackdrop');
 
-function openModal() {
-  introModal.hidden = false;
+introBtn?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  catOverlay.hidden = false;
   document.body.style.overflow = 'hidden';
-  modalBack.focus();
-}
+  catClose.focus();
+});
 
-function closeModal() {
-  introModal.hidden = true;
+function closeCat() {
+  catOverlay.hidden = true;
   document.body.style.overflow = '';
   introBtn.focus();
 }
 
-introBtn?.addEventListener('click', (e) => {
-  e.stopPropagation();
-  openModal();
-});
-
-modalBack?.addEventListener('click', closeModal);
-modalBackdrop?.addEventListener('click', closeModal);
-
+catClose?.addEventListener('click', closeCat);
+catBackdrop?.addEventListener('click', closeCat);
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && !introModal.hidden) closeModal();
+  if (e.key === 'Escape' && !catOverlay.hidden) closeCat();
 });
