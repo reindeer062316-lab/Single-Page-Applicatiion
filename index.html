@@ -2,258 +2,77 @@
 <html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark light" />
-    <title>數位名片盒｜張路晴 LU-CING, CHANG</title>
-    <meta
-      name="description"
-      content="張路晴 LU-CING, CHANG 的數位名片盒：社群連結、簡介與小互動。"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f5ebe0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>張路晴 luching chang｜個人數位名片</title>
+    <meta name="description" content="張路晴 luching chang 的個人數位名片" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&family=Noto+Sans+TC:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <a class="skip" href="#content">跳到主要內容</a>
+    <main class="container">
+      <div class="profile-photo">
+        <img src="./assets/profile.png" alt="張路晴的個人照片" />
+      </div>
 
-    <main id="content" class="page">
-      <section class="card" aria-label="數位名片">
-        <header class="card__top">
-          <div class="brand">
-            <div class="brand__dot" aria-hidden="true"></div>
-            <p class="brand__name">Single Page Application</p>
-          </div>
+      <h1 class="name">張路晴 luching chang</h1>
+      <p class="subtitle">陽明交通大學生物醫學工程研究所 碩一</p>
 
-          <div class="actions">
-            <button id="themeBtn" class="iconBtn" type="button" aria-label="切換主題">
-              <span class="icon" aria-hidden="true">◐</span>
-            </button>
-            <button id="shakeBtn" class="iconBtn" type="button" aria-label="讓卡片抖一下">
-              <span class="icon" aria-hidden="true">✦</span>
-            </button>
-          </div>
-        </header>
-
-        <div class="hero">
-          <div class="avatarWrap">
-            <div id="tilt" class="avatar" role="img" aria-label="個人照片">
-              <img
-                id="avatarImg"
-                src="./assets/profile.png"
-                alt=""
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="avatar__badge" aria-hidden="true">Hello</div>
-            </div>
-          </div>
-
-          <div class="heroRight">
-            <div class="title">
-              <h1 class="title__zh">張路晴</h1>
-              <p class="title__en">LU-CING, CHANG</p>
-              <p class="title__role">數位健康與創新醫療器材實驗室</p>
-              <p class="title__tagline">
-                專題：非接觸式LDV多語者分離系統
-              </p>
-            </div>
-
-            <div class="panel panel--heroTraits">
-              <div class="panel__head">
-                <h2 class="panel__title panel__title--hand">個人特質</h2>
-                <span class="panel__pill">Traits</span>
-              </div>
-              <ul class="traits">
-                <li class="traits__item">開朗活潑</li>
-                <li class="traits__item">認真負責</li>
-                <li class="traits__item">圓融處事</li>
-                <li class="traits__item">積極有想法</li>
-              </ul>
-              <div class="traitsBtns" aria-label="特質標籤">
-                <span class="traitsBtns__btn">團隊合作</span>
-                <span class="traitsBtns__btn">勇敢挑戰</span>
-                <span class="traitsBtns__btn">領導溝通</span>
-                <span class="traitsBtns__btn">國際觀</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <section class="grid" aria-label="內容區塊">
-          <div class="panel panel--soup">
-            <div class="panel__head">
-              <button
-                class="panelToggle panelToggle--hand"
-                type="button"
-                data-toggle="soupContent"
-                aria-expanded="false"
-              >
-                心靈小雞湯
-              </button>
-              <span class="panel__pill">Soup</span>
-            </div>
-            <div id="soupContent" class="panel__content" hidden>
-              <img
-                class="soup__img"
-                src="./assets/soup.png"
-                alt="當你真心渴望某件事，整個宇宙都會聯合起來幫你完成。"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </div>
-
-          <div class="panel">
-            <div class="panel__head">
-              <h2 class="panel__title">學歷</h2>
-              <span class="panel__pill">Education</span>
-            </div>
-            <ol class="edu" aria-label="學歷時間軸">
-              <li class="edu__item">
-                <p class="edu__school">陽明交通大學</p>
-                <p class="edu__dept">生物醫學工程研究所</p>
-                <p class="edu__time">2025.09 ～ 現今</p>
-              </li>
-              <li class="edu__item">
-                <p class="edu__school">中原大學</p>
-                <p class="edu__dept">生物醫學工程學系</p>
-                <p class="edu__time">2021.09 ～ 2025.06</p>
-              </li>
-            </ol>
-          </div>
-
-          <div class="panel">
-            <div class="panel__head">
-              <h2 class="panel__title">經歷</h2>
-              <span class="panel__pill">Experience</span>
-            </div>
-            <ul class="xp" aria-label="經歷清單">
-              <li class="xp__item">
-                <span class="xp__org">NYCU SBP Lab</span>
-                <span class="xp__role">實驗室代表</span>
-              </li>
-              <li class="xp__item">
-                <span class="xp__org">中原北聯9屆</span>
-                <span class="xp__role">公關長</span>
-              </li>
-              <li class="xp__item">
-                <span class="xp__org">中原27屆醫工營</span>
-                <span class="xp__role">醫課長</span>
-              </li>
-              <li class="xp__item">
-                <span class="xp__org">中原67屆畢聯會</span>
-                <span class="xp__role">畢代</span>
-              </li>
-              <li class="xp__item">
-                <span class="xp__org">中原 工程與法律</span>
-                <span class="xp__role">課程助教</span>
-              </li>
-            </ul>
-          </div>
-
-          <div id="hobbies" class="panel">
-            <div class="panel__head">
-              <button
-                class="panelToggle"
-                type="button"
-                data-toggle="hobbiesContent"
-                aria-expanded="false"
-              >
-                興趣愛好
-              </button>
-              <span class="panel__pill">Hobbies</span>
-            </div>
-            <div id="hobbiesContent" class="panel__content" hidden>
-              <img class="hobbiesCat" src="./assets/cat.png" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-              <div class="hobbies">
-                <div class="hobbies__left">
-                  <div class="tags" aria-label="興趣標籤">
-                    <span class="tag tag--a">#喜歡出去玩</span>
-                    <span class="tag tag--b">#抽盲盒買買買</span>
-                    <span class="tag tag--c">#愛吃鬼</span>
-                    <span class="tag tag--d">#看棒球</span>
-                    <span class="tag tag--e">#追劇／看電影</span>
-                    <span class="tag tag--b">#睡覺</span>
-                    <span class="tag tag--a">#嚕貓</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="panel">
-            <h2 class="panel__title">社群連結</h2>
-            <div class="links" role="list">
-              <a class="chip" role="listitem" href="https://github.com/" target="_blank" rel="noreferrer">
-                <span class="chip__icon" aria-hidden="true">⌘</span>
-                GitHub
-              </a>
-              <a class="chip" role="listitem" href="https://www.instagram.com/" target="_blank" rel="noreferrer">
-                <span class="chip__icon" aria-hidden="true">◎</span>
-                Instagram
-              </a>
-              <a id="lifeBtn" class="chip chip--btn" href="./assets/life-1.png" target="_blank" rel="noreferrer">
-                <span class="chip__icon" aria-hidden="true">⌁</span>
-                生活照
-              </a>
-              <a id="emailBtn" class="chip chip--btn" href="mailto:reindeer062316@gmail.com">
-                <span class="chip__icon" aria-hidden="true">✉</span>
-                Email
-              </a>
-            </div>
-            <p class="panel__hint">
-              小互動：移動滑鼠/手指在照片上會有立體轉動；右上角可切換主題或讓卡片抖一下。
-            </p>
-          </div>
-        </section>
-
-        <div id="lightbox" class="lightbox" hidden aria-label="生活照相簿" role="dialog" aria-modal="true">
-          <div class="lightbox__backdrop" data-close="true"></div>
-          <div class="lightbox__panel" role="document">
-            <button class="lightbox__close" type="button" aria-label="關閉" data-close="true">×</button>
-            <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="上一張" data-prev="true">‹</button>
-            <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="下一張" data-next="true">›</button>
-
-            <div class="lightbox__stage" aria-label="左右滑動切換照片">
-              <img id="lightboxImg" class="lightbox__img" alt="生活照" decoding="async" />
-              <p id="lightboxStatus" class="lightbox__status" aria-live="polite"></p>
-            </div>
-
-            <div id="lightboxDots" class="lightbox__dots" aria-label="照片頁碼"></div>
-          </div>
-        </div>
-
-        <div id="emailModal" class="modal" hidden aria-label="Email 聯絡方式" role="dialog" aria-modal="true">
-          <div class="modal__backdrop" data-email-close="true"></div>
-          <div class="modal__panel" role="document" tabindex="-1">
-            <button class="modal__close" type="button" aria-label="關閉" data-email-close="true">×</button>
-            <div class="modal__content">
-              <div class="modal__icon" aria-hidden="true">✉</div>
-              <div class="modal__text">
-                <p class="modal__email">reindeer062316@gmail.com</p>
-                <p class="modal__hint">歡迎聯絡~</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button id="toTop" class="toTop" type="button" aria-label="回到最上面" hidden>
-          ↑
+      <div class="social-links">
+        <a href="https://github.com/" target="_blank" rel="noreferrer" class="social-btn">
+          GitHub
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" class="social-btn">
+          Instagram
+        </a>
+        <button id="introBtn" class="social-btn social-btn--button" type="button">
+          自我介紹
         </button>
-
-        <footer class="card__bottom">
-          <p class="footnote">© <span id="year"></span> LU-CING, CHANG</p>
-          <p class="footnote footnote--muted">
-            這頁面可離線開啟（直接雙擊 `index.html`）。
-          </p>
-        </footer>
-      </section>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" class="social-btn">
+          LinkedIn
+        </a>
+      </div>
     </main>
 
-    <script src="./main.js" defer></script>
+    <!-- 自我介紹 Modal -->
+    <div id="introModal" class="modal" hidden role="dialog" aria-modal="true" aria-label="自我介紹">
+      <div class="modal__backdrop" id="modalBackdrop"></div>
+      <div class="modal__panel" role="document">
+        <button class="modal__back" id="modalBack" type="button" aria-label="返回">
+          ← 返回
+        </button>
+        <div class="modal__content">
+          <div class="modal__avatar">
+            <img src="./assets/profile.png" alt="" aria-hidden="true" />
+          </div>
+          <h2 class="modal__name">張路晴 luching chang</h2>
+          <p class="modal__school">陽明交通大學生物醫學工程研究所 碩一</p>
+          <p class="modal__bio">
+            嗨！我是路晴，目前就讀陽明交通大學生醫所。<br />
+            對數位健康與創新醫療器材充滿熱情，<br />
+            喜歡出去玩、嚕貓、看棒球，也愛嘗試各種新事物。
+          </p>
+          <a
+            href="https://reindeer062316-lab.github.io/Single-Page-Applicatiion/"
+            target="_blank"
+            rel="noreferrer"
+            class="modal__link"
+          >
+            查看完整個人頁面 →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="pawprints" aria-hidden="true"></div>
+
+    <script src="./main.js"></script>
   </body>
 </html>
